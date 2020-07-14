@@ -34,9 +34,9 @@ const Navbar = (props: PropsNavbar) => {
               Menu
             </a>
             <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              {props.items.map((menu: PropsMenuItems) => {
+              {props.items.map((menu: PropsMenuItems, index: number) => {
                 return (
-                  <Link className="dropdown-item" to={menu.route}>
+                  <Link key={index} className="dropdown-item" to={menu.route}>
                     {menu.title}
                   </Link>
                 );
